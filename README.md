@@ -1915,6 +1915,13 @@ btn.addEventListener('click', clickHandler.handleClick.bind(clickHandler));
 
 `bind` method is available to all the function similar to call and apply method which take argument value of `this`.
 
+## Question 51. What is event bubbling and how is it different to event capturing?
+Both event capturing and bubbling are both part of a process called 'event propagation', where browsers respond to events happening on the page. Older browsers used to do one or the other, but nowadays they all do both. 
+
+The first phase – the capturing phase – occurs as soon as an event happens. It starts at the topmost level, which is either 'document' or 'window' depending on the event. From there it goes through <html> and whatever lives inside it until it reaches the element the event occurred within.
+
+The second phase – the bubbling phase – then happens. It repeats the process but in reverse, beginning with the element the event was triggered by and 'bubbling' to the topmost <html> element. When adding event listeners, this is the default.
+
 
 # Coding Questions
 
